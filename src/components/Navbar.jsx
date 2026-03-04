@@ -16,8 +16,12 @@ export function Navbar({ activeId, onNavigate, isOpen, onToggle }) {
   const [scrolled, setScrolled] = useState(false);
 
   const handleClick = (id) => {
-    const el = document.getElementById(id);
-    el?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (id === 'hero') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      const el = document.getElementById(id);
+      el?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
     onNavigate?.(id);
   };
 

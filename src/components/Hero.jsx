@@ -11,7 +11,8 @@ export function Hero() {
           Smart Monitoring for Precision Machining.
         </p>
         <p className="hero__body">
-        Eliminate the fog of manual logging and human error. Our integrated edge-intelligence platform captures every cycle and every mechanical heartbeat, providing a high-fidelity view of your entire shop floor. By unifying machine health and production analytics into a single source of truth, we ensure your operation stays ahead of downtime and focused on precision.        </p>
+          Eliminate the fog of manual logging and human error. Our edge-intelligence platform captures every cycle and every mechanical heartbeat—unifying machine health and production into a single source of truth so you stay ahead of downtime and focused on precision.
+        </p>
         <a href="#get-started" className="btn btn--primary hero__cta" onClick={scrollToGetStarted}>
           Get started with ToolLink
         </a>

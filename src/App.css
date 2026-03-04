@@ -273,6 +273,7 @@ p {
 .section__inner {
   max-width: var(--container);
   margin: 0 auto;
+  padding: 0 var(--space);
 }
 
 .section__title {
@@ -289,6 +290,13 @@ p {
   line-height: 1.65;
   max-width: 64ch;
   margin-bottom: var(--space-lg);
+}
+
+#value .section__intro {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: var(--text);
+  margin-bottom: var(--space);
 }
 
 /* ----- Why ----- */
@@ -408,8 +416,8 @@ p {
 
 /* ----- Why it matters: cost of unmonitored equipment (stats + charts) ----- */
 .value-stats {
-  margin-bottom: var(--space-lg);
-  padding: var(--space) 0;
+  margin-bottom: var(--space);
+  padding: calc(var(--space) * 0.75) 0;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
@@ -432,12 +440,12 @@ p {
 .value-stats__sources {
   font-size: 0.75rem;
   color: var(--text-muted);
-  margin: var(--space) 0 0;
+  margin: calc(var(--space) * 0.75) 0 0;
   font-style: italic;
 }
 
 .value-stats--tracking {
-  margin-top: var(--space);
+  margin-top: calc(var(--space) * 0.5);
 }
 
 /* ----- Benefits (3 cards) ----- */
@@ -935,6 +943,9 @@ p {
   }
   .stats-cards {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .value-stats:not(.value-stats--tracking) .stats-cards {
+    grid-template-columns: repeat(4, 1fr);
   }
   .stats-charts {
     flex-direction: row;
