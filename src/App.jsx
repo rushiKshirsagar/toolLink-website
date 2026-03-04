@@ -7,6 +7,7 @@ import { Sensors } from './components/Sensors';
 import { UseCases } from './components/UseCases';
 import { Pricing } from './components/Pricing';
 import { GetStarted } from './components/GetStarted';
+import { Footer } from './components/Footer';
 import { useScrollSpy } from './hooks/useScrollSpy';
 import { useScrollReveal } from './hooks/useScrollReveal';
 import './App.css';
@@ -34,6 +35,7 @@ function App() {
         <UseCases />
         <Pricing />
         <GetStarted />
+        <Footer />
       </div>
     </main>
   );

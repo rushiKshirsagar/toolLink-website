@@ -41,7 +41,7 @@ export function Platform() {
         <div data-reveal-row>
           <h2 className="section__title">Dashboard &amp; alerts</h2>
           <p className="section__intro">
-            All machine data and production tracking flow into one place: the web dashboard. See live sensor readings, production count, rejection count, reject reasons, and downtime status and reasons. Compare trends over time and get notified the moment something needs attention — on your phone or in your inbox.
+            All machine data and production tracking flow into one place: the web dashboard. See live sensor readings, production count, rejection count, reject reasons, and downtime status and reasons. Compare trends over time and get notified the moment something needs attention, on your phone or in your inbox.
           </p>
         </div>
         <div className="platform__copy accordion">

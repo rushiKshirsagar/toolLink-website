@@ -15,7 +15,7 @@ export function Why() {
               from your equipment, a compact monitoring unit per machine sends data to the cloud,
               and the service analyzes it for abnormal patterns. You get a web dashboard for
               real-time visibility and a mobile app with push notifications when something needs
-              attention — so you can set up devices quickly and act on alerts before failures happen.
+              attention, so you can set up devices quickly and act on alerts before failures happen.
             </p>
           </div>
         </div>

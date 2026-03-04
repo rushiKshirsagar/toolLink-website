@@ -28,7 +28,7 @@ export function Value() {
         <div data-reveal-row>
           <h2 className="section__title">Why it matters</h2>
           <p className="section__intro">
-            The cost of unmonitored equipment is measurable—and avoidable. Here's what the data shows.
+            The cost of unmonitored equipment is measurable and avoidable. Here's what the data shows.
           </p>
         </div>
         <div className="value-stats" data-reveal-row>
@@ -57,7 +57,7 @@ export function Value() {
 
         <div className="value-stats value-stats--tracking" data-reveal-row>
           <p className="section__intro">
-            The cost of paper and manual entry—and the upside of automation—is clear in the numbers.
+            The cost of paper and manual entry and the upside of automation is clear in these numbers.
           </p>
           <div className="stats-cards">
             <div className="stats-card" data-reveal-row>
