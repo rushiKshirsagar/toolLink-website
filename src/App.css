@@ -256,6 +256,15 @@ p {
   transform: translateY(0);
 }
 
+/* Mobile: always show sections (IntersectionObserver can be unreliable on small viewports) */
+@media (max-width: 899px) {
+  [data-section],
+  [data-reveal-row] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 .section {
   padding: var(--space-lg) var(--space);
   scroll-margin-top: 80px;
