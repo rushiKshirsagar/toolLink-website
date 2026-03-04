@@ -25,15 +25,17 @@ export function Sensors() {
   return (
     <section id="sensors" className="section" data-section>
       <div className="section__inner">
-        <h2 className="section__title">Sensors</h2>
-        <p className="section__intro">
-          Each unit uses three sensing streams and built-in production tracking so you can correlate thermal, mechanical, and quality data with production count, reject count, and downtime in one place. These feeds power the dashboard, configurable alerts, and AI-based predictive maintenance models that learn from your machines over time.
-        </p>
+        <div data-reveal-row>
+          <h2 className="section__title">Sensors</h2>
+          <p className="section__intro">
+            Each unit uses three sensing streams and built-in production tracking so you can correlate thermal, mechanical, and quality data with production count, reject count, and downtime in one place. These feeds power the dashboard, configurable alerts, and AI-based predictive maintenance models that learn from your machines over time.
+          </p>
+        </div>
         <ul className="sensor-list accordion">
           {SENSORS.map(({ label, text }, index) => {
             const isOpen = index === openIndex;
             return (
-              <li key={label} className="sensor-item accordion-item">
+              <li key={label} className="sensor-item accordion-item" data-reveal-row>
                 <button
                   type="button"
                   className="accordion-header"

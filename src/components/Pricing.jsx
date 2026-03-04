@@ -2,7 +2,7 @@ export function Pricing() {
   return (
     <section id="pricing" className="section section--pricing" data-section>
       <div className="section__inner pricing">
-        <div className="pricing__header">
+        <div className="pricing__header" data-reveal-row>
           <h2 className="section__title">Pricing</h2>
           <p className="section__intro">
             We&apos;re finalizing transparent pricing tailored for pilot deployments and full-scale rollouts.
@@ -11,7 +11,7 @@ export function Pricing() {
         </div>
 
         <div className="pricing__content">
-          <div className="pricing-card">
+          <div className="pricing-card" data-reveal-row>
             <div className="pricing-card__badge">Coming soon</div>
             <h3 className="pricing-card__title">Early access</h3>
             <p className="pricing-card__subtitle">

@@ -38,15 +38,17 @@ export function Platform() {
   return (
     <section id="platform" className="section" data-section>
       <div className="section__inner">
-        <h2 className="section__title">Dashboard &amp; alerts</h2>
-        <p className="section__intro">
-          All machine data and production tracking flow into one place: the web dashboard. See live sensor readings, production count, rejection count, reject reasons, and downtime status and reasons. Compare trends over time and get notified the moment something needs attention — on your phone or in your inbox.
-        </p>
+        <div data-reveal-row>
+          <h2 className="section__title">Dashboard &amp; alerts</h2>
+          <p className="section__intro">
+            All machine data and production tracking flow into one place: the web dashboard. See live sensor readings, production count, rejection count, reject reasons, and downtime status and reasons. Compare trends over time and get notified the moment something needs attention — on your phone or in your inbox.
+          </p>
+        </div>
         <div className="platform__copy accordion">
           {PLATFORM_ITEMS.map(({ title, body }, index) => {
             const isOpen = index === openIndex;
             return (
-              <div key={title} className="platform__block accordion-item">
+              <div key={title} className="platform__block accordion-item" data-reveal-row>
                 <button
                   type="button"
                   className="accordion-header"
