@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 const SENSORS = [
   {
     label: 'Temperature',
@@ -14,6 +16,12 @@ const SENSORS = [
 ];
 
 export function Sensors() {
+  const [openIndex, setOpenIndex] = useState(0);
+
+  const toggle = (index) => {
+    setOpenIndex((current) => (current === index ? -1 : index));
+  };
+
   return (
     <section id="sensors" className="section" data-section>
       <div className="section__inner">
@@ -23,13 +31,26 @@ export function Sensors() {
           data in one place. These feeds power the dashboard, configurable alerts, and
           AI-based predictive maintenance models that learn from your machines over time.
         </p>
-        <ul className="sensor-list">
-          {SENSORS.map(({ label, text }) => (
-            <li key={label} className="sensor-item">
-              <span className="sensor-item__label">{label}</span>
-              <p className="sensor-item__text">{text}</p>
-            </li>
-          ))}
+        <ul className="sensor-list accordion">
+          {SENSORS.map(({ label, text }, index) => {
+            const isOpen = index === openIndex;
+            return (
+              <li key={label} className="sensor-item accordion-item">
+                <button
+                  type="button"
+                  className="accordion-header"
+                  onClick={() => toggle(index)}
+                  aria-expanded={isOpen}
+                >
+                  <span className="sensor-item__label accordion-title">{label}</span>
+                  <span className={`accordion-icon ${isOpen ? 'accordion-icon--open' : ''}`} />
+                </button>
+                <div className={`accordion-body ${isOpen ? 'accordion-body--open' : ''}`}>
+                  <p className="sensor-item__text">{text}</p>
+                </div>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </section>

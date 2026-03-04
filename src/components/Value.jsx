@@ -32,46 +32,34 @@ export function Value() {
           protect throughput, and keep machines running instead of fighting fires.
         </p>
         <ul className="value-grid">
-          <li className="value-grid__row" data-reveal-row>
-            <div className="value-grid__row-inner">
-              {CARDS.slice(0, 2).map(({ title, text, image }) => (
-                <div key={title} className="value-card">
-                  <div className="value-card__media">
-                    <img
-                      src={image}
-                      alt=""
-                      width={800}
-                      height={500}
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <h3 className="value-card__title">{title}</h3>
-                  <p className="value-card__text">{text}</p>
+          {CARDS.map(({ title, text, image }, index) => (
+            <li
+              key={title}
+              className={`value-card ${index % 2 === 1 ? 'value-card--image-right' : ''}`}
+              data-reveal-row
+            >
+              <div className="value-card__media">
+                <img
+                  src={image}
+                  alt=""
+                  width={800}
+                  height={500}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div className="value-card__body">
+                <div className="value-card__eyebrow">
+                  <span className="value-card__index">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                  <span className="value-card__tag">Outcome</span>
                 </div>
-              ))}
-            </div>
-          </li>
-          <li className="value-grid__row" data-reveal-row>
-            <div className="value-grid__row-inner">
-              {CARDS.slice(2, 4).map(({ title, text, image }) => (
-                <div key={title} className="value-card">
-                  <div className="value-card__media">
-                    <img
-                      src={image}
-                      alt=""
-                      width={800}
-                      height={500}
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <h3 className="value-card__title">{title}</h3>
-                  <p className="value-card__text">{text}</p>
-                </div>
-              ))}
-            </div>
-          </li>
+                <h3 className="value-card__title">{title}</h3>
+                <p className="value-card__text">{text}</p>
+              </div>
+            </li>
+          ))}
         </ul>
       </div>
     </section>

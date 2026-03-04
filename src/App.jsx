@@ -2,16 +2,16 @@ import { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Value } from './components/Value';
-import { Product } from './components/Product';
 import { Platform } from './components/Platform';
 import { Sensors } from './components/Sensors';
 import { UseCases } from './components/UseCases';
+import { Pricing } from './components/Pricing';
 import { GetStarted } from './components/GetStarted';
 import { useScrollSpy } from './hooks/useScrollSpy';
 import { useScrollReveal } from './hooks/useScrollReveal';
 import './App.css';
 
-const SECTION_IDS = ['hero', 'value', 'product', 'platform', 'sensors', 'use-cases', 'get-started'];
+const SECTION_IDS = ['hero', 'value', 'platform', 'sensors', 'use-cases', 'pricing', 'get-started'];
 
 function App() {
   const activeId = useScrollSpy(SECTION_IDS);
@@ -29,10 +29,10 @@ function App() {
       <div className="main-content">
         <Hero />
         <Value />
-        <Product />
         <Platform />
         <Sensors />
         <UseCases />
+        <Pricing />
         <GetStarted />
       </div>
     </main>

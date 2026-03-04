@@ -11,7 +11,7 @@ export function Hero() {
           Smart Monitoring for Precision Machining.
         </p>
         <p className="hero__body">
-         Transform your manufacturing process by turning hidden physical variables into actionable digital data. Our integrated monitoring solution provides a comprehensive view of your machine’s health and performance, allowing you to detect irregularities before they lead to failure. By bridging the gap between your equipment and a centralized dashboard, we help you maximize uptime, ensure consistent quality, and bring a new level of precision to every production cycle.
+         Transform your manufacturing processes by turning hidden physical variables into actionable digital data. Our integrated monitoring solution provides a comprehensive view of your machine’s health and performance, allowing you to detect irregularities before they lead to failures.
         </p>
         <a href="#get-started" className="btn btn--primary hero__cta" onClick={scrollToGetStarted}>
           Get started with ToolLink

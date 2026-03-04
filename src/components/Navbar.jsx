@@ -3,10 +3,10 @@ import { useEffect, useState } from 'react';
 const LINKS = [
   { id: 'hero', label: 'Overview' },
   { id: 'value', label: 'Why it matters' },
-  { id: 'product', label: 'Product' },
   { id: 'platform', label: 'Dashboard & alerts' },
   { id: 'sensors', label: 'Sensors' },
   { id: 'use-cases', label: 'Use cases' },
+  { id: 'pricing', label: 'Pricing' },
   { id: 'get-started', label: 'Get started' },
 ];
 
