@@ -11,10 +11,7 @@ models refine their predictions so alerts stay relevant and false alarms stay lo
   },
   {
     title: 'Web dashboard',
-    body: `See every machine at a glance: temperature, vibration, spindle RPM, and reject-bucket
-weight in one view. Drill into any machine for detailed time-series charts and historical
-trends. Compare multiple machines or time ranges to spot patterns and plan maintenance.
-The dashboard works on desktop and tablet so you can check status from the office or the floor.`,
+    body: `See every machine at a glance: temperature, vibration, spindle RPM, reject-bucket weight, production count, rejection count, reject reasons, and downtime status and reasons in one view. No more paper logs or spreadsheets — all captured automatically. Drill into any machine for detailed time-series charts and historical trends. Compare multiple machines or time ranges to spot patterns and plan maintenance. The dashboard works on desktop and tablet so you can check status from the office or the floor.`,
   },
   {
     title: 'Mobile and email alerts',
@@ -43,9 +40,7 @@ export function Platform() {
       <div className="section__inner">
         <h2 className="section__title">Dashboard &amp; alerts</h2>
         <p className="section__intro">
-          All machine data flows into a single place: the web dashboard. View live readings, compare
-          trends over time, and get notified the moment something needs attention — on your phone or
-          in your inbox.
+          All machine data and production tracking flow into one place: the web dashboard. See live sensor readings, production count, rejection count, reject reasons, and downtime status and reasons. Compare trends over time and get notified the moment something needs attention — on your phone or in your inbox.
         </p>
         <div className="platform__copy accordion">
           {PLATFORM_ITEMS.map(({ title, body }, index) => {
