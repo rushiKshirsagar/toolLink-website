@@ -29,7 +29,7 @@ API access and integration options to keep your workflows in sync.`,
 ];
 
 export function Platform() {
-  const [openIndex, setOpenIndex] = useState(0);
+  const [openIndex, setOpenIndex] = useState(-1);
 
   const toggle = (index) => {
     setOpenIndex((current) => (current === index ? -1 : index));

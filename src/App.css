@@ -419,8 +419,7 @@
 .value-stats {
   margin-bottom: var(--space);
   padding: calc(var(--space) * 0.75) 0;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 2px solid var(--border);
 }
 
 .value-stats__title {
@@ -673,7 +672,7 @@
 }
 
 .platform__block {
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 
 .platform__heading {
@@ -690,11 +689,7 @@
 }
 
 .sensor-item {
-  padding: 16px 0;
-  border-bottom: 1px solid var(--border);
-}
-
-.sensor-item:last-child {
+  padding: 0;
   border-bottom: none;
 }
 
@@ -717,11 +712,21 @@
 
 /* ----- Accordions (platform & sensors) ----- */
 .accordion {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space);
+  align-items: start;
   border-radius: var(--radius);
 }
 
+.accordion-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
 .accordion-item + .accordion-item {
-  border-top: 1px solid var(--border);
+  border-top: none;
 }
 
 .accordion-item:first-of-type {
@@ -730,13 +735,14 @@
 
 .accordion-header {
   width: 100%;
-  padding: 14px 0;
+  padding: 14px 16px;
   background: none;
   border: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
+  text-align: left;
 }
 
 .accordion-title {
@@ -778,11 +784,13 @@
   overflow: hidden;
   opacity: 0;
   transition: max-height 0.25s ease, opacity 0.25s ease;
+  padding: 0 16px;
 }
 
 .accordion-body--open {
   max-height: 400px;
   opacity: 1;
+  padding: 0 16px 16px;
 }
 
 /* ----- Get started ----- */
@@ -1125,6 +1133,12 @@
   .sensors__layout .sensor-list {
     flex: 1;
     min-width: 0;
+  }
+}
+
+@media (max-width: 639px) {
+  .accordion {
+    grid-template-columns: 1fr;
   }
 }
 

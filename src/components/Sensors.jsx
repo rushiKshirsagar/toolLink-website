@@ -13,10 +13,14 @@ const SENSORS = [
     label: 'Wireless reject-bucket weight',
     text: 'Weight sensor on the reject bucket tracks scrap and cycle yield wirelessly, so you can tie quality and reject rates to machine and process conditions.',
   },
+  {
+    label: 'CT clamp (electrical)',
+    text: 'A current-transformer clamp measures motor current to detect run state, load, and electrical anomalies. This helps correlate power draw with production and identify issues like phase imbalance or overload before they cause downtime.',
+  },
 ];
 
 export function Sensors() {
-  const [openIndex, setOpenIndex] = useState(0);
+  const [openIndex, setOpenIndex] = useState(-1);
 
   const toggle = (index) => {
     setOpenIndex((current) => (current === index ? -1 : index));
@@ -28,7 +32,7 @@ export function Sensors() {
         <div data-reveal-row>
           <h2 className="section__title">Sensors</h2>
           <p className="section__intro">
-            Each unit uses three sensing streams and built-in production tracking so you can correlate thermal, mechanical, and quality data with production count, reject count, and downtime in one place. These feeds power the dashboard, configurable alerts, and AI-based predictive maintenance models that learn from your machines over time.
+            Each unit uses four sensing streams and built-in production tracking so you can correlate thermal, mechanical, and quality data with production count, reject count, and downtime in one place. These feeds power the dashboard, configurable alerts, and AI-based predictive maintenance models that learn from your machines over time.
           </p>
         </div>
         <ul className="sensor-list accordion">
