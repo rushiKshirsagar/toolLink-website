@@ -11,8 +11,7 @@ export function Hero() {
           Smart Monitoring for Precision Machining.
         </p>
         <p className="hero__body">
-          Eliminate the fog of manual logging and human error. Our edge-intelligence platform captures every cycle and every mechanical heartbeat—unifying machine health and production into a single source of truth so you stay ahead of downtime and focused on precision.
-        </p>
+        ToolLink is a plug-and-play edge intelligence platform that transforms precision machining by automating shop-floor data and predicting equipment failures. By replacing error-prone manual logging with smart sensors that monitor every mechanical heartbeat, it provides a real-time, single source of truth for machine health. With minimal human intervention, the system's AI catches subtle anomalies before they cause downtime, allowing manufacturers to effortlessly shift from costly reactive repairs to proactive, uninterrupted production.        </p>
         <a href="#get-started" className="btn btn--primary hero__cta" onClick={scrollToGetStarted}>
           Get started with ToolLink
         </a>

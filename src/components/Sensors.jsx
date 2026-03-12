@@ -7,11 +7,11 @@ const SENSORS = [
   },
   {
     label: 'Vibration & spindle RPM',
-    text: 'Vibration for bearing and tooling health; RPM for run state and load. Together they support predictive maintenance and usage insights.',
+    text: 'Instantly detect when your machine goes down, a motor strains under load, or the cabin shakes excessively. These combined sensors automatically track exact run states and predict tooling failures before they impact your production.',
   },
   {
     label: 'Wireless reject-bucket weight',
-    text: 'Weight sensor on the reject bucket tracks scrap and cycle yield wirelessly, so you can tie quality and reject rates to machine and process conditions.',
+    text: 'Simply drop a rejected part into the bucket to instantly auto-increment your reject count. Eliminate manual logging entirely while automatically calculating the exact total scrap produced by every machine.',
   },
   {
     label: 'CT clamp (electrical)',
@@ -32,10 +32,13 @@ export function Sensors() {
         <div data-reveal-row>
           <h2 className="section__title">Sensors</h2>
           <p className="section__intro">
-            Each unit uses four sensing streams and built-in production tracking so you can correlate thermal, mechanical, and quality data with production count, reject count, and downtime in one place. These feeds power the dashboard, configurable alerts, and AI-based predictive maintenance models that learn from your machines over time.
-          </p>
+          While the image below shows our wired prototype, your final hardware is a single, industrial-grade "black box" built for the shop floor—zero exposed wiring, zero complicated setup. Each plug-and-play unit captures four continuous sensing streams, automatically correlating thermal, mechanical, and quality data with your production and downtime metrics. These real-time feeds power your dashboard and train our predictive AI, giving you total visibility with minimal human intervention.          </p>
         </div>
-        <ul className="sensor-list accordion">
+        <div className="sensors__layout" data-reveal-row>
+          <div className="sensors__media">
+            <img src={`${import.meta.env.BASE_URL}images/sensors.jpg`} alt="Sensors including temperature, vibration, reject-bucket weight, and CT clamp for motor current" />
+          </div>
+          <ul className="sensor-list accordion">
           {SENSORS.map(({ label, text }, index) => {
             const isOpen = index === openIndex;
             return (
@@ -55,7 +58,8 @@ export function Sensors() {
               </li>
             );
           })}
-        </ul>
+          </ul>
+        </div>
       </div>
     </section>
   );
