@@ -44,6 +44,16 @@ export function Platform() {
             All machine data and production tracking flow into one place: the web dashboard. See live sensor readings, production count, rejection count, reject reasons, and downtime status and reasons. Compare trends over time and get notified the moment something needs attention, on your phone or in your inbox.
           </p>
         </div>
+        <div className="platform__grafana" data-reveal-row>
+          <div className="platform__grafana-frame">
+            <iframe
+              title="CNC Fleet Overview Grafana Dashboard"
+              src="https://telemetry.rushikshirsagar.com/d/ad2gr2k/fleet-overview?orgId=1&from=now-3h&to=now&timezone=browser&var-machine=CNC-01&refresh=5s&kiosk=true"
+              loading="lazy"
+              sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+            />
+          </div>
+        </div>
         <div className="platform__copy accordion">
           {PLATFORM_ITEMS.map(({ title, body }, index) => {
             const isOpen = index === openIndex;

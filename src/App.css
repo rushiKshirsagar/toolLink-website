@@ -671,6 +671,25 @@
   margin: 0 0 12px;
 }
 
+.platform__grafana {
+  margin-bottom: var(--space-lg);
+}
+
+.platform__grafana-frame {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+}
+
+.platform__grafana-frame iframe {
+  display: block;
+  width: 100%;
+  height: 650px;
+  border: none;
+}
+
 .platform__block {
   margin-bottom: 0;
 }
