@@ -48,7 +48,7 @@ export function Platform() {
           <div className="platform__grafana-frame">
             <iframe
               title="CNC Fleet Overview Grafana Dashboard"
-              src="https://telemetry.rushikshirsagar.com/d/ad2gr2k/fleet-overview?orgId=1&from=now-3h&to=now&timezone=browser&var-machine=$__all&refresh=5s&kiosk=true"
+              src="https://telemetry.rushikshirsagar.com/d/ad2gr2k/fleet-overview?orgId=1&from=now-3h&to=now&timezone=browser&var-machine=$__all&refresh=5s&kiosk=true&hideLogo=true"
               loading="lazy"
               sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
             />
