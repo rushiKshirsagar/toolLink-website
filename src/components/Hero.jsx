@@ -1,8 +1,4 @@
 export function Hero() {
-  const scrollToGetStarted = (e) => {
-    e.preventDefault();
-    document.getElementById('get-started')?.scrollIntoView({ behavior: 'smooth' });
-  };
   return (
     <section id="hero" className="hero section--in-view" data-section>
       <div className="hero__inner">
@@ -11,10 +7,8 @@ export function Hero() {
           Smart Monitoring for Precision Machining.
         </p>
         <p className="hero__body">
-        ToolLink is a plug-and-play edge intelligence platform that transforms precision machining by automating shop-floor data and predicting equipment failures. By replacing error-prone manual logging with smart sensors that monitor every mechanical heartbeat, it provides a real-time, single source of truth for machine health. With minimal human intervention, the system's AI catches subtle anomalies before they cause downtime, allowing manufacturers to effortlessly shift from costly reactive repairs to proactive, uninterrupted production.        </p>
-        <a href="#get-started" className="btn btn--primary hero__cta" onClick={scrollToGetStarted}>
-          Get started with ToolLink
-        </a>
+        ToolLink is a plug and play sensor network that listens to the mechanical heartbeat of your shop floor. We replace error prone manual logging with automated telemetry, using real-time edge AI to catch equipment failures before they stop production.
+        </p>
       </div>
     </section>
   );
