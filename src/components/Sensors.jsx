@@ -32,11 +32,11 @@ export function Sensors() {
         <div data-reveal-row>
           <h2 className="section__title">Sensors</h2>
           <p className="section__intro">
-          While the image below shows the wired prototype, your final hardware is a single, industrial-grade "black box" built for the shop floor—zero exposed wiring, zero complicated setup. Each plug-and-play unit captures four continuous sensing streams, automatically correlating thermal, mechanical, and quality data with your production and downtime metrics. These real-time feeds power your dashboard and train our predictive AI, giving you total visibility with minimal human intervention.          </p>
+          While the image below shows the wired prototype, your final hardware is a single, industrial-grade "black box" built for the shop floor. Zero exposed wiring, zero complicated setup. Each plug and play unit captures four continuous sensing streams, automatically correlating thermal, mechanical, and quality data with your production and downtime metrics. These real-time feeds power your dashboard and train our predictive AI, giving you total visibility with minimal human intervention.          </p>
         </div>
         <div className="sensors__layout" data-reveal-row>
           <div className="sensors__media">
-            <img src={`${import.meta.env.BASE_URL}images/sensors.jpg`} alt="Sensors including temperature, vibration, reject-bucket weight, and CT clamp for motor current" />
+            <img src={`${import.meta.env.BASE_URL}images/sensors.jpeg`} alt="Sensors including temperature, vibration, reject-bucket weight, and CT clamp for motor current" />
           </div>
           <ul className="sensor-list accordion">
           {SENSORS.map(({ label, text }, index) => {
